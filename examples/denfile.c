@@ -33,9 +33,9 @@ int write_bytes(int fd, char* buf, int bytecount);
  */
 
 unsigned char *
-read_den(filename, xptr, yptr, zptr)
-char *filename;		/* name of file containing data */
-int *xptr, *yptr, *zptr;/* volume dimensions (output parameters) */
+read_den(
+	char *filename,				/* name of file containing data */
+	int *xptr, int *yptr, int *zptr)	/* volume dimensions (output parameters) */
 {
     int fd;			/* file descriptor */
     unsigned char *data;	/* data array */
@@ -128,10 +128,10 @@ int *xptr, *yptr, *zptr;/* volume dimensions (output parameters) */
  */
 
 int
-write_den(filename, data, xlen, ylen, zlen)
-char *filename;		/* name of file to create */
-unsigned char *data;	/* volume data */
-int xlen, ylen, zlen;	/* volume dimensions */
+write_den(
+	char *filename,			/* name of file to create */
+	unsigned char *data,		/* volume data */
+	int xlen, int ylen, int zlen)	/* volume dimensions */
 {
     int fd;			/* file descriptor */
     short map_version;		/* Version of this .den file                 */
@@ -219,10 +219,10 @@ int xlen, ylen, zlen;	/* volume dimensions */
  */
 
 int
-read_bytes(fd, buf, bytecount)
-int fd;		/* file descriptor to read from */
-char *buf;	/* memory in which to store data */
-int bytecount;	/* number of bytes to read */
+read_bytes(
+	int fd,		/* file descriptor to read from */
+	char *buf,	/* memory in which to store data */
+	int bytecount)	/* number of bytes to read */
 {
     int n;
 
@@ -248,11 +248,11 @@ int bytecount;	/* number of bytes to read */
  */
 
 int
-read_shorts(fd, sbuf, shortcount, swap)
-int fd;		/* file descriptor to read from */
-short *sbuf;	/* memory in which to store data */
-int shortcount;	/* number of shorts to read */
-int swap;	/* if nonzero then swap bytes */
+read_shorts(
+	int fd,		/* file descriptor to read from */
+	short *sbuf,	/* memory in which to store data */
+	int shortcount,	/* number of shorts to read */
+	int swap)	/* if nonzero then swap bytes */
 {
     int n, c;
     int bytecount = shortcount * 2;
@@ -297,11 +297,11 @@ int swap;	/* if nonzero then swap bytes */
  */
 
 int
-read_words(fd, wbuf, wordcount, swap)
-int fd;		/* file descriptor to read from */
-int *wbuf;	/* memory in which to store data */
-int wordcount;	/* number of words to read */
-int swap;	/* if nonzero then swap bytes */
+read_words(
+	int fd,		/* file descriptor to read from */
+	int *wbuf,	/* memory in which to store data */
+	int wordcount,	/* number of words to read */
+	int swap)	/* if nonzero then swap bytes */
 {
     int n, c;
     int bytecount = wordcount * 4;
@@ -346,10 +346,10 @@ int swap;	/* if nonzero then swap bytes */
  */
 
 int
-write_bytes(fd, buf, bytecount)
-int fd;		/* file descriptor to write to */
-char *buf;	/* memory containing data */
-int bytecount;	/* number of bytes to write */
+write_bytes(
+	int fd,		/* file descriptor to write to */
+	char *buf,	/* memory containing data */
+	int bytecount)	/* number of bytes to write */
 {
     int n;
 

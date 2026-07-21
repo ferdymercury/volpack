@@ -43,7 +43,6 @@ main()
     unsigned volume_size;/* size of volume */
     int density_fd;	/* file descriptor for density file (input) */
     int volume_fd;	/* file descriptor for volume (output) */
-    void *malloc();
 
     /* create a context */
     vpc = vpCreateContext();

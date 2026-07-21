@@ -44,9 +44,7 @@
 int write_den(char* filename, unsigned char* data, int xlen, int ylen, int zlen);
 
 int
-main(argc, argv)
-int argc;
-char **argv;
+main(int argc, char **argv)
 {
     char *src_file;				/* input file name */
     char *dst_file;				/* output file name */
@@ -58,8 +56,7 @@ char **argv;
     unsigned dst_xlen, dst_ylen, dst_zlen;	/* size of output data */
     unsigned dst_size;				/* size in bytes of output */
     int code;
-    double atof();
-    unsigned char *read_den();
+    unsigned char *read_den(char *filename, int *xptr, int *yptr, int *zptr);
 
     /* parse arguments */
     if (argc < 6 || argc > 7) {

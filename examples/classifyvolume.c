@@ -35,9 +35,7 @@
 #include "volume.h"
 
 int
-main(argc, argv)
-int argc;
-char **argv;
+main(int argc, char **argv)
 {
     vpContext *vpc;	/* rendering context */
     int volume_fd;	/* file descriptor for volume (input) */
@@ -51,7 +49,6 @@ char **argv;
     float density_ramp[DENSITY_MAX+1];	/* opacity as a function of density */
     float gradient_ramp[GRADIENT_MAX+1];/* opacity as a function 
 					   of gradient magnitude */
-    void *malloc();
 
     /* check command-line arguments */
     use_octree = 0;
