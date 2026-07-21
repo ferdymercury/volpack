@@ -168,7 +168,9 @@ extern double rint ANSI_ARGS((double x)); /* missing from Ultrix math.h */
  * Macros.                                                         *
  *******************************************************************/
 
+#ifndef NULL
 #define NULL 0
+#endif
 
 #define MAX(a,b)        (((a)<(b)) ? (b) : (a))
 #define MIN(a,b)        (((a)>(b)) ? (b) : (a))
