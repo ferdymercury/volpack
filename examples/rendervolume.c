@@ -36,6 +36,7 @@
 
 int StorePGM(char* image, int width, int height, char* filename);
 
+int
 main(argc, argv)
 int argc;
 char **argv;
@@ -166,7 +167,7 @@ char **argv;
     vpCurrentMatrix(vpc, VP_MODEL);
 
     /* set the image buffer */
-    vpSetImage(vpc, (unsigned char *)image, IMAGE_WIDTH, IMAGE_HEIGHT,
+    vpSetImage(vpc, image[0], IMAGE_WIDTH, IMAGE_HEIGHT,
 	       IMAGE_WIDTH, VP_LUMINANCE);
 
     /* render and store the images */
@@ -199,7 +200,7 @@ char **argv;
 	    strcpy(filename, "brainsmall.ppm");
 	else
 	    sprintf(filename, "brainsmall_%d.ppm", n + 1000);
-	StorePGM(image, IMAGE_WIDTH, IMAGE_HEIGHT, filename);
+	StorePGM(image[0], IMAGE_WIDTH, IMAGE_HEIGHT, filename);
 
 	/* rotate by 5 degrees for next image */
 	vpRotate(vpc, VP_Y_AXIS, 5.0);
@@ -208,6 +209,7 @@ char **argv;
     return(0);
 }
 
+int
 StorePGM(image, width, height, filename)
 char *image;
 int width, height;

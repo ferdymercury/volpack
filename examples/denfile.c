@@ -218,6 +218,7 @@ int xlen, ylen, zlen;	/* volume dimensions */
  * error or the full number of bytes could not be read.
  */
 
+int
 read_bytes(fd, buf, bytecount)
 int fd;		/* file descriptor to read from */
 char *buf;	/* memory in which to store data */
@@ -246,6 +247,7 @@ int bytecount;	/* number of bytes to read */
  * error or the full number of shorts could not be read.
  */
 
+int
 read_shorts(fd, sbuf, shortcount, swap)
 int fd;		/* file descriptor to read from */
 short *sbuf;	/* memory in which to store data */
@@ -294,6 +296,7 @@ int swap;	/* if nonzero then swap bytes */
  * error or the full number of words could not be read.
  */
 
+int
 read_words(fd, wbuf, wordcount, swap)
 int fd;		/* file descriptor to read from */
 int *wbuf;	/* memory in which to store data */
@@ -342,6 +345,7 @@ int swap;	/* if nonzero then swap bytes */
  * Return value is 1 if the write was succesful or 0 if there was an error.
  */
 
+int
 write_bytes(fd, buf, bytecount)
 int fd;		/* file descriptor to write to */
 char *buf;	/* memory containing data */

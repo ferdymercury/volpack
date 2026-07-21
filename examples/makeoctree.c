@@ -33,6 +33,7 @@
 #include <unistd.h>
 #include "volume.h"
 
+int
 main()
 {
     vpContext *vpc;	/* rendering context */

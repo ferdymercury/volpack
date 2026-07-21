@@ -34,6 +34,7 @@
 #include <fcntl.h>
 #include "volume.h"
 
+int
 main(argc, argv)
 int argc;
 char **argv;
