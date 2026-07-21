@@ -29,7 +29,12 @@
  */
 
 #include <stdlib.h>
+#include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include "volume.h"
+
+int StorePGM(char* image, int width, int height, char* filename);
 
 main(argc, argv)
 int argc;

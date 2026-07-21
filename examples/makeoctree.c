@@ -29,6 +29,8 @@
  */
 
 #include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include "volume.h"
 
 main()

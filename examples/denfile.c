@@ -6,6 +6,9 @@
  */
 
 #include <stdio.h>
+#include <fcntl.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 #ifndef MIN
 #define MIN(a, b) ((a) > (b) ? (b) : (a))
@@ -16,6 +19,11 @@
 #define	MAP_CUR_VERSION_SWAB	0x0100	/* byte-swapped current version */
 
 #define MAX_READ_SIZE	8192	/* maximum # of bytes per read(2) call */
+
+int read_shorts(int fd, short* sbuf, int shortcount, int swap);
+int read_words(int fd, int* wbuf, int wordcount, int swap);
+int read_bytes(int fd, char* buf, int bytecount);
+int write_bytes(int fd, char* buf, int bytecount);
 
 /*
  * read_den

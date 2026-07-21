@@ -38,6 +38,10 @@
 #include <stdio.h>
 #include <volpack.h>
 #include <malloc.h>
+#include <stdlib.h>
+#include <string.h>
+
+int write_den(char* filename, unsigned char* data, int xlen, int ylen, int zlen);
 
 main(argc, argv)
 int argc;
