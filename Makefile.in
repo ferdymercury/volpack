@@ -139,7 +139,7 @@ CSRC = vp_check.c vp_context.c vp_extract.c vp_file.c vp_linalg.c vp_octree.c \
        vp_rle.c vp_shade.c vp_transpose.c vp_util.c vp_view.c vp_warp.c
 HSRC = volpack.h vp_global.h patchlevel.h
 MSRC = vp_compA.m4 vp_warpA.m4
-SUPPORT = Makefile.in configure.in no_edit_header makeopts.c
+SUPPORT = Makefile.in configure.ac no_edit_header makeopts.c
 COMP_SRCS = vp_compAC1NB.c vp_compAC3NB.c vp_compAR1NB.c vp_compAR3NB.c \
        vp_compAC1PB.c vp_compAC3PB.c vp_compAR1PB.c vp_compAR3PB.c \
        vp_compAC00G.c vp_compAR00G.c vp_compAC1NS.c vp_compAC3NS.c \
