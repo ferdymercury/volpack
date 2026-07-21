@@ -28,6 +28,7 @@
  * $Revision: 1.5 $
  */
 
+#include <stdlib.h>
 #include "volume.h"
 
 main(argc, argv)
