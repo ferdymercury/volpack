@@ -175,7 +175,7 @@ makeopts: makeopts.c
 	cc -o makeopts makeopts.c
 
 vp_opts.c: makeopts Makefile
-	makeopts vp_opts.c $(CFLAGS)
+	./makeopts vp_opts.c $(CFLAGS)
 
 $(COMP_SRCS): $(COMP_IN)
 	@for i in $(COMP_SRCS) ; \
