@@ -1,8 +1,9 @@
 dnl  This file is an input file used by the GNU "autoconf" program to
 dnl  generate the file "configure", which is run during installation
 dnl  to configure the system for the local environment.
-AC_INIT(vp_global.h)
-AC_CONFIG_HEADER(config.h)
+AC_INIT
+AC_CONFIG_SRCDIR([vp_global.h])
+AC_CONFIG_HEADERS([config.h])
 
 AC_CANONICAL_HOST
 
@@ -44,7 +45,7 @@ AC_SUBST(CC)
 if test -z "$M4" ; then
   case "$host" in
   *-sunos*)
-    AC_CHECKING(/usr/5bin/m4)
+    AS_MESSAGE([checking /usr/5bin/m4...])
     if test -f /usr/5bin/m4; then
       M4="/usr/5bin/m4"
     fi
@@ -52,9 +53,10 @@ if test -z "$M4" ; then
   esac
 fi
 AC_PATH_PROGS(M4, gnum4 gm4 m4, m4)
-AC_HEADER_STDC
+
 AC_CHECK_HEADERS(string.h memory.h)
 
 AC_FUNC_VPRINTF
 
-AC_OUTPUT(Makefile examples/Makefile)
+AC_CONFIG_FILES([Makefile examples/Makefile])
+AC_OUTPUT
