@@ -25,6 +25,9 @@ dist_libvolpack_la_SOURCES = volpack.h vp_global.h patchlevel.h \
 			vp_rle.c vp_shade.c vp_transpose.c vp_util.c vp_view.c vp_warp.c
 nodist_libvolpack_la_SOURCES =  $(COMP_SRCS) $(WARP_SRCS)
 
+# Public headers, copied to $(prefix)/include/
+include_HEADERS = volpack.h
+
 vp_opts.c: makeopts Makefile
 	./makeopts vp_opts.c $(CFLAGS)
 
